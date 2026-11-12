@@ -23,6 +23,7 @@ public class BookController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Map<String, Long> create(@Valid @RequestBody BookRequest request) {
+
         return Map.of("id", bookService.create(request));
     }
 
